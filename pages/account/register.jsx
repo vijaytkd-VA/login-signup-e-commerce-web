@@ -42,30 +42,30 @@ function Register() {
     return (
         <Layout>
             <div className="card">
-                <h4 className="card-header">Register</h4>
+                <h4 className="card-header"> REGISTER</h4>
                 <div className="card-body">
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="mb-3">
-                            <label className="form-label">First Name</label>
+                            <label className="form-label">FIRST NAME</label>
                             <input name="firstName" type="text" {...register('firstName')} className={`form-control ${errors.firstName ? 'is-invalid' : ''}`} />
                             <div className="invalid-feedback">{errors.firstName?.message}</div>
                         </div>
                         <div className="mb-3">
-                            <label className="form-label">Last Name</label>
+                            <label className="form-label">LAST NAME</label>
                             <input name="lastName" type="text" {...register('lastName')} className={`form-control ${errors.lastName ? 'is-invalid' : ''}`} />
                             <div className="invalid-feedback">{errors.lastName?.message}</div>
                         </div>
                         <div className="mb-3">
-                            <label className="form-label">Username</label>
+                            <label className="form-label">USERNAME</label>
                             <input name="username" type="text" {...register('username')} className={`form-control ${errors.username ? 'is-invalid' : ''}`} />
                             <div className="invalid-feedback">{errors.username?.message}</div>
                         </div>
                         <div className="mb-3">
-                            <label className="form-label">Password</label>
+                            <label className="form-label">PASSWORD</label>
                             <input name="password" type="password" {...register('password')} className={`form-control ${errors.password ? 'is-invalid' : ''}`} />
                             <div className="invalid-feedback">{errors.password?.message}</div>
                         </div>
-                        <button disabled={formState.isSubmitting} className="btn btn-primary">
+                        <button disabled={formState.isSubmitting} style={{ color: 'red' }} className="btn btn-primary">
                             {formState.isSubmitting && <span className="spinner-border spinner-border-sm me-1"></span>}
                             Register
                         </button>
